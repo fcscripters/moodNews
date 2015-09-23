@@ -1,0 +1,32 @@
+{
+  "name": "moodNews",
+  "version": "1.0.1",
+  "description": "A series of javascript challenges for Founders & Coders students to learn web dev skills.",
+  "main": "static-server.js",
+  "scripts": {
+    "test": "exit 0",
+    "start": "node static-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foundersandcoders/morning-challenge.git"
+  },
+  "keywords": [
+    "testing",
+    "skills",
+    "learn",
+    "development",
+    "javascript"
+  ],
+  "author": "@nelsonic <contact.nelsonic@gmail.com> (https://github.com/nelsonic)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/foundersandcoders/morning-challenge/issues"
+  },
+  "homepage": "https://github.com/foundersandcoders/morning-challenge",
+  "dependencies": {
+    "hapi": "^10.0.0",
+    "inert": "^3.0.1",
+    "xml2js": "^0.4.12"
+  }
+}
