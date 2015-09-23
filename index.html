@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mood News</title>
+
 </head>
 <body>
 	Hello World
@@ -14,6 +15,28 @@
 	<div class="soundcloud"></div>
 	<div class="instagram"></div>
 	<div class="guardian"></div>
+
+<!-- 
+<script src="http://connect.soundcloud.com/sdk.js"></script> -->
+<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script src="js/keys.js"></script>
+<script>
+
+// initialize client with app credentials
+SC.initialize({
+  client_id: 'sckey',
+  redirect_uri: 'https://github.com/fcscripters/callback'
+});
+
+// initiate auth popup
+SC.connect(function() {
+  SC.get('/me', function(me) {
+    alert('Hello, ' + me.username);
+  });
+});
+
+</script>
+
 
 </body>
 </html>
