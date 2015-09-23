@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Mood News</title>
-
+	<script src="widgetplayer.js"></script>
 </head>
 <body>
 	Hello World
@@ -12,21 +12,47 @@
 		<div class="title"></div>
 	</header>
 	<div class="search"></div>
-	<div class="soundcloud"></div>
+	<div class="soundcloud">
+<!-- 	https://w.soundcloud.com/player/?url=http://api.soundcloud.com/users/1539950/favorites
+ -->
+
+
+
+	</div>
 	<div class="instagram"></div>
 	<div class="guardian"></div>
 
-<!-- 
+<!-- -
 <script src="http://connect.soundcloud.com/sdk.js"></script> -->
-<script src="http://connect.soundcloud.com/sdk.js"></script>
+<script src="http://connect.soundcloud.com/sdk-2.0.0.js"></script>
 <script src="js/keys.js"></script>
 <script>
 
+
+
+
+
+
+
+var genre="rock";
+var request = new XMLHttpRequest();
+request.open("GET", "https://api.soundcloud.com/search?client_id=38fed2acd8bf8e0001c5a3dddad41c76&limit=50&offset=50&q=rock", false);
+request.send(null);
+var data = JSON.parse(request.responseText);
+console.log(data);
+
+
 // initialize client with app credentials
 SC.initialize({
-  client_id: 'sckey',
+ 
+  client_id: '38fed2acd8bf8e0001c5a3dddad41c76',
   redirect_uri: 'https://github.com/fcscripters/callback'
-});
+})
+
+SC.stream("/track/293", function(sound){
+sound.play()
+
+})
 
 // initiate auth popup
 SC.connect(function() {
