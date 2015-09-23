@@ -33,20 +33,20 @@
 
 
 
-/*
+
 var genre="rock";
 var request = new XMLHttpRequest();
 request.open("GET", "https://api.soundcloud.com/search?client_id=38fed2acd8bf8e0001c5a3dddad41c76&limit=50&offset=50&q=rock", false);
 request.send(null);
 var data = JSON.parse(request.responseText);
 console.log(data);
-*/
+
 
 // initialize client with app credentials
 SC.initialize({
  
   client_id: '38fed2acd8bf8e0001c5a3dddad41c76',
-  redirect_uri: /*'https://github.com/fcscripters*/'/callback'
+  redirect_uri: 'https://github.com/fcscripters/callback'
 })
 
 SC.stream("/track/293", function(sound){
