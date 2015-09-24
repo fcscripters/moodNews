@@ -9,34 +9,114 @@
 	Hello World
 	Sohil
 	<header>
-		<div class="title"></div>
-	</header>
-	<div class="search"></div>
-	<div class="soundcloud"></div>
-	<div class="instagram"></div>
-	<div class="guardian"></div>
+	<div class="title"></div>
+</header>
+<div class="search"></div>
+<div class="soundcloud">
 
-<!-- 
-<script src="http://connect.soundcloud.com/sdk.js"></script> -->
-<script src="http://connect.soundcloud.com/sdk.js"></script>
-<script src="js/keys.js"></script>
+	<button id="play">Start</button>
+	<button id="stop">Stop</button>
+		<ul>
+			<li id="track"></li>
+		</ul>
+</div>
+<div class="instagram"></div>
+<div class="guardian"></div>
+
+<script src="http://connect.soundcloud.com/sdk-2.0.0.js"></script>
 <script>
+	// initialize client with app credentials */
+	SC.initialize({
 
-// initialize client with app credentials
-SC.initialize({
-  client_id: 'sckey',
-  redirect_uri: 'https://github.com/fcscripters/callback'
+		/* client_id: '38fed2acd8bf8e0001c5a3dddad41c76',*/
+		client_id: '5c5a64cfdf37c482bb757df270d33c53',
+		redirect_uri: 'http://fcscripters.github.io/moodNews/callback.html'
+
+	})
+
+	// var query = document.getElementById("result").value;
+	var query = "oasis";
+	var trackID;
+
+	SC.get("/tracks", {
+  	//title : query,
+		q: query,
+		limit: 7
+	}, function(tracks) {
+
+		console.log(tracks[0].title);
+		console.log(tracks);
+
+		trackID = tracks[0].id;
+		console.log (trackID);
+
+
+		document.getElementById("track").innerHTML = tracks[0].title;
+
+
+	SC.stream("/tracks/"+ trackID, function(sound) {
+			document.getElementById('play').addEventListener("click", function(){
+					console.log(trackID);
+					//document.getElementById('play').click() = function(e) {
+					//e.preventDefault();
+					sound.play();
+			});
+			document.getElementById('stop').addEventListener("click", function(){
+					console.log(trackID);
+					//document.getElementById('play').click() = function(e) {
+					//e.preventDefault();
+					sound.stop();
+			});
+
+		});
+
 });
 
-// initiate auth popup
-SC.connect(function() {
-  SC.get('/me', function(me) {
-    alert('Hello, ' + me.username);
-  });
-});
 
+
+	/*SC.stream( "/tracks/75975771", function(sound){
+			console.log (sound);
+			autoPlay: true,
+			document.getElementById('#start').onClick = function(e) {
+					//e.preventDefault();
+					sound.play();
+			};
+			document.getElementById('#start').onClick = function(e) {
+					//e.preventDefault();
+					sound.stop();
+			};
+	});
+
+	//SC.Stream extra
+
+	document.getElementById('start').onClick = function(e) {
+			e.preventDefault();
+			sound.stop();
+
+
+
+	/* set user we wish to see trackList for */
+	//    var USER = "stereomood";
+	/* set user name on DOM */
+	//$("#user").html(USER);
+
+	// initiate auth popup
+	/*SC.connect(function() {
+	  SC.get('/me', function(me) {
+	    alert('Hello, ' + me.username);
+	  });
+	});
+	console.log(SC)*/
+
+	/*var genre="rock";
+	var request = new XMLHttpRequest();
+	request.open("GET", "https://api.soundcloud.com/search?client_id=38fed2acd8bf8e0001c5a3dddad41c76&limit=50&offset=50&q=rock", false);
+	request.send(null);
+	var data = JSON.parse(request.responseText);
+	console.log(data);*/
 </script>
 
 
 </body>
+
 </html>
