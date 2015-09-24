@@ -1,13 +1,19 @@
 function displayData(response) {
   var arrphotos = [];
+  var arrphotoswhole = [];
 
-  console.log(response['data']['0']['images']['standard_resolution']['url']);
-  for (var i = 0; i < 6; i++) {
-    arrphotos.push(response['data'][i]['images']['standard_resolution']['url']);
-
+  for (var s = 0; s < 20; s++) {
+    arrphotoswhole.push(response['data'][s]);
   }
 
-  console.log(arrphotos);
+  arrphotoswhole.sort(function(a,b){
+    return b['likes']['count'] - a['likes']['count'];
+  });
+
+  for (var i = 0; i < 6; i++) {
+    arrphotos.push(arrphotoswhole[i]['images']['standard_resolution']['url']);
+
+  }
 
   // document.getElementById("pic").setAttribute("src", imgArray[0]);
   for (var j = 0; j < 6; j++) {
@@ -37,11 +43,11 @@ function clickfunc(){
 
   // create script element
   if (clientS === ''){
-    clientS = 'pharrell';
+    clientS = 'foifighters';
   }
   var script = document.createElement('script');
   // assing src with callback name
-  script.src = "https://api.instagram.com/v1/tags/" + clientS + "/media/recent?access_token=2208596365.1fb234f.2d3cc38a6e354a958800809ced644f50&callback=displayData";
+  script.src = "https://api.instagram.com/v1/tags/" + clientS + "/media/recent?access_token=2208596365.1fb234f.2d3cc38a6e354a958800809ced644f50&count=33&callback=displayData";
   // insert script to document and load content
   document.body.appendChild(script);
 
@@ -55,3 +61,60 @@ function clickfunc(){
 }
 //console.log(clickfunc());
 document.getElementById("search").addEventListener("click", clickfunc);
+
+
+
+///////////////////////////////////////////////////////////////////
+
+document.getElementById("search").addEventListener("click", soundfunc);
+
+function soundfunc(){
+  SC.initialize({
+
+    /* client_id: '38fed2acd8bf8e0001c5a3dddad41c76',*/
+    client_id: '5c5a64cfdf37c482bb757df270d33c53',
+    redirect_uri: 'http://fcscripters.github.io/moodNews/callback.html'
+
+  });
+
+  var query = document.getElementById("result").value;
+  // var query = "foofighters";
+  console.log (query);
+  var trackID;
+
+  SC.get("/tracks", {
+    //title : query,
+    q: query,
+    limit: 7
+  }, function(tracks) {
+
+    console.log(tracks[0].title);
+    console.log(tracks);
+
+    trackID = tracks[0].id;
+    console.log (trackID);
+
+
+    document.getElementById("track").innerHTML = tracks[0].title;
+
+
+  SC.stream("/tracks/"+ trackID, function(sound) {
+      document.getElementById('play').addEventListener("click", function(){
+          console.log(trackID);
+          //document.getElementById('play').click() = function(e) {
+          //e.preventDefault();
+          sound.play();
+      });
+      document.getElementById('stop').addEventListener("click", function(){
+          console.log(trackID);
+          //document.getElementById('play').click() = function(e) {
+          //e.preventDefault();
+          sound.stop();
+      });
+
+    });
+
+  });
+
+
+}
