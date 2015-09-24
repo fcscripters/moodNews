@@ -15,7 +15,7 @@
 <div class="search"></div>
 <div class="soundcloud">
 
-	<button id="play">Start</button>
+	<button id="play">Play</button>
 	<button id="stop">Stop</button>
 	<button id="pause">Pause</button>
 		<ul>
@@ -95,22 +95,32 @@ for (var i = 0; i < tracks.length; i++) {
 
 <script>
 
-
 test('Have result been returned when search is clicked', function(assert) {
 	var done = assert.async();
 	var check = false;
 	setTimeout (function(){
-
-	if(document.getElementById("track").innerHTML.value){
+	console.log (document.getElementById("track").innerHTML);
+	if(document.getElementById("track").innerHTML){
 			check = true;
 		}
-
 			assert.equal( check, true, 'Tracks are available' );
 			done();
 		},1000);
 		});
 
+	test('Has the button been clicked?', function(assert) {
+			var clicked = false;
+			var done = assert.async();
 
+      var playTest = document.getElementById('play');
+      playTest.addEventListener("click", function(){
+        clicked = true;
+      });
+	    setTimeout (function(){
+	      assert.equal( clicked, true, 'Button has been clicked' );
+	      done();
+	    },5000);
+	});
 
 
 
