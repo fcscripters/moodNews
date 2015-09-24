@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
   <link rel="stylesheet" href="custom.css">
   <link href='https://fonts.googleapis.com/css?family=Raleway:300,500,800' rel='stylesheet' type='text/css'>
+  <script src="http://connect.soundcloud.com/sdk-2.0.0.js"> </script>
 
 </head>
 
@@ -22,7 +23,7 @@
       Find out more about an Artist. Get Searching
     </p>
     <br>
-    <input id="result" type="text" name="search" placeholder="e.g. Tom Jones"></input>
+    <input id="result" type="text" name="search" placeholder="e.g. Foo Fighters"></input>
     <br>
     <button id="search" type="button" name="button" >Search</button>
   </form>
@@ -30,6 +31,17 @@
 </div>
 <div class="soundcloudlogo">
   <img class="soundlogo" src="assets/sc_st_white_152x96.png" alt="" />
+
+</div>
+
+<div class="soundcloud">
+
+  <ul>
+    <li id="track"></li>
+  </ul>
+  	<button id="play"><img id="playbutton"src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-play-128.png" alt="" /></button>
+  	<button id="stop"><img id="stopbutton" src="https://cdn4.iconfinder.com/data/icons/defaulticon/icons/png/256x256/media-stop.png" alt="" /></button>
+
 
 </div>
 
@@ -44,6 +56,14 @@
   <div id="qunit-fixture"></div>
   <script src="https://code.jquery.com/qunit/qunit-1.18.0.js"></script>
   <script src="instagram.js"></script>
+
+
+
+    // initialize client with app credentials */
+
+
+  </script>
+
 
   <script>
 
@@ -78,7 +98,7 @@
     setTimeout(function(){
       // clickfunc();
       // console.log(clickfunc());
-      assert.equal(clickfunc(),'pharrell');
+      assert.equal(clickfunc(),'foofighters');
       done();
     },1000)
   });
