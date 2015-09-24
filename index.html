@@ -94,9 +94,26 @@ for (var i = 0; i < tracks.length; i++) {
 </script>
 
 <script>
-test( "timeElapsed should be Zero before we start the Timer", function() {
-	equal( T.timeElapsed, 0, 'Message: timer is zero at start' );
-});
+
+
+test('Have result been returned when search is clicked', function(assert) {
+	var done = assert.async();
+	var check = false;
+	setTimeout (function(){
+
+	if(document.getElementById("track")){
+			check = true;
+		}
+
+			assert.equal( check, true, 'Tracks are available' );
+			done();
+		},1000);
+		});
+
+
+
+
+
 </script>
 
 </body>
