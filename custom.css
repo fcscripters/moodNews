@@ -1,0 +1,87 @@
+body{
+  font-family: Raleway;
+
+}
+.title{
+  background-color: rgb(85, 85, 85);
+  font-size: 4em;
+  height: 4em;
+  text-align: center;
+}
+.title h2{
+  margin-top: 0em;
+  padding-top: 0.75em;
+}
+.form{
+  background-color: rgb(152, 152, 152);
+  height: 25em;
+  text-align: center;
+
+}
+
+.form p{
+  margin:0px;
+  padding-top: 0.75em;
+  font-size: 2.5em;
+  text-align: center;
+}
+#result{
+  width:10em;
+  height:2em;
+  text-align: center;
+  font-size: 2.5em;
+  border-radius: 0.5em;
+  margin-top: 0.75em;
+}
+#search{
+  margin-top: 1em;
+  background: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 35px 20px 35px;
+  text-decoration: none;
+}
+
+#insta{
+  background-color: rgb(18, 86, 136);
+  text-align: center;
+}
+.instaphotos{
+  margin-top: 0px;
+  height:50em;
+  width:50em;
+  text-align: center;
+  margin: 0.25em 0.25em 0.25em 0.25em;
+  border-radius: 1em;
+}
+.divlogo{
+  background-color: rgb(18, 86, 136);
+  text-align: center;
+  padding:1.5em;
+}
+.logo{
+  text-align: center;
+  height:5em;
+  width:5em;
+  text-align: center;
+}
+.soundcloudlogo{
+  background-color: #ff3300;
+  text-align: center;
+  padding:1.5em;
+}
+.soundlogo{
+  text-align: center;
+  height:5em;
+  /*width:6em;*/
+  text-align: center;
+}
