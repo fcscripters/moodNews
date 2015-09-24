@@ -78,8 +78,8 @@ function soundfunc(){
 
   });
 
-  // var query = document.getElementById("result").value;
-  var query = "oasis";
+  var query = document.getElementById("result").value;
+  // var query = "oasis";
   var trackID;
 
 
