@@ -121,7 +121,20 @@ body{
   padding: 20px 35px 20px 35px;
   text-decoration: none;
 }
-#playbutton, #stopbutton{
+#pause{
+  margin-top: 1em;
+  background: #00ccff;
+
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 35px 20px 35px;
+  text-decoration: none;
+}
+#playbutton, #stopbutton, #pausebutton{
   height:2em;
   width:2em;
 }

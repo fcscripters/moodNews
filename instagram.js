@@ -69,6 +69,7 @@ document.getElementById("search").addEventListener("click", clickfunc);
 document.getElementById("search").addEventListener("click", soundfunc);
 
 function soundfunc(){
+  // initialize client with app credentials */
   SC.initialize({
 
     /* client_id: '38fed2acd8bf8e0001c5a3dddad41c76',*/
@@ -77,23 +78,30 @@ function soundfunc(){
 
   });
 
-  var query = document.getElementById("result").value;
-  // var query = "foofighters";
-  console.log (query);
+  // var query = document.getElementById("result").value;
+  var query = "oasis";
   var trackID;
 
+
   SC.get("/tracks", {
-    //title : query,
+
     q: query,
-    limit: 7
+    // created_at: {'from': todayDate},
+    //limit: 7
   }, function(tracks) {
 
-    console.log(tracks[0].title);
+tracks.sort(function(a,b){
+  return a.created_at < b.created_at;
+});
+
+for (var i = 0; i < tracks.length; i++) {
+  console.log(tracks[i].created_at);
+}
+
     console.log(tracks);
 
     trackID = tracks[0].id;
     console.log (trackID);
-
 
     document.getElementById("track").innerHTML = tracks[0].title;
 
@@ -111,10 +119,15 @@ function soundfunc(){
           //e.preventDefault();
           sound.stop();
       });
-
+      document.getElementById('pause').addEventListener("click", function(){
+          console.log(trackID);
+          //document.getElementById('play').click() = function(e) {
+          //e.preventDefault();
+          sound.pause();
+      });
     });
 
-  });
+});
 
 
 }
