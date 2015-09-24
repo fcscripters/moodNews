@@ -101,7 +101,7 @@ test('Have result been returned when search is clicked', function(assert) {
 	var check = false;
 	setTimeout (function(){
 
-	if(document.getElementById("track")){
+	if(document.getElementById("track").innerHTML.value){
 			check = true;
 		}
 
