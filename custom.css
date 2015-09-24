@@ -74,6 +74,16 @@ body{
   width:5em;
   text-align: center;
 }
+.soundcloud{
+  background-color: #ff3300;
+  text-align: center;
+  padding:1.5em;
+}
+#track{
+  list-style: none;
+  font-size: 4.5em;
+
+}
 .soundcloudlogo{
   background-color: #ff3300;
   text-align: center;
@@ -84,4 +94,47 @@ body{
   height:5em;
   /*width:6em;*/
   text-align: center;
+}
+#play{
+  margin-top: 1em;
+  background: #00ccff;
+
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 35px 20px 35px;
+  text-decoration: none;
+}
+#stop{
+  margin-top: 1em;
+  background: #00ccff;
+
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 35px 20px 35px;
+  text-decoration: none;
+}
+#pause{
+  margin-top: 1em;
+  background: #00ccff;
+
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 20px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 30px;
+  padding: 20px 35px 20px 35px;
+  text-decoration: none;
+}
+#playbutton, #stopbutton, #pausebutton{
+  height:2em;
+  width:2em;
 }
