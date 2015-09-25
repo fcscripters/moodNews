@@ -30,6 +30,8 @@ Test are run using the Qunit platform. Tests for the code are written in the ind
 
 ###wireframe  
 Here is what we expect the layout of the website to look like
+
+
 ![](https://files.gitter.im/sohilpandya/D2Jn/mockup.png)  
 
 ###Soundcloud API
