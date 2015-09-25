@@ -82,8 +82,22 @@ body{
 #track{
   list-style: none;
   font-size: 4.5em;
-
 }
+
+#track a {
+  text-decoration: none;
+  color: white;
+  background-color: black;
+  padding: 0em;
+}
+
+#trackUser {
+  list-style: none;
+  font-size: 1.5em;
+  padding: 0em;
+}
+
+
 .soundcloudlogo{
   background-color: #ff3300;
   text-align: center;
