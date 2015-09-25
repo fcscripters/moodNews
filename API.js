@@ -111,10 +111,11 @@ for (var i = 0; i < tracks.length; i++) {
     console.log(tracks);
 
     trackID = tracks[0].id;
-    console.log (trackID);
+    //console.log (trackID);
 
-    document.getElementById("track").innerHTML = tracks[0].title;
+    document.getElementById("track").innerHTML = "<a href=" +tracks[0].permalink_url+ ">" +tracks[0].title+"</a>";
 
+    document.getElementById("trackUser").innerHTML = tracks[0].user.username;
 
   SC.stream("/tracks/"+ trackID, function(sound) {
       document.getElementById('play').addEventListener("click", function(){
