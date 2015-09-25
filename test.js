@@ -6,7 +6,7 @@
       var submitButton = document.getElementById('search');
       submitButton.addEventListener("click", function(){
         clicked = true;
-      })
+      });
       assert.equal( clicked, true, 'Button has been clicked' );
       done();
     },2000);
@@ -32,7 +32,7 @@
       // console.log(clickfunc());
       assert.equal(clickfunc(),'foifighters');
       done();
-    },1000)
+    },1000);
   });
 
   test('Have result been returned when search is clicked', function(assert) {
@@ -55,7 +55,7 @@
         var playTest = document.getElementById('play');
         playTest.addEventListener("click", function(){
           clicked = true;
-        });
+       });
   	    setTimeout (function(){
   	      assert.equal( clicked, true, 'Button has been clicked' );
   	      done();
