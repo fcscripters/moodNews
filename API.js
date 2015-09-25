@@ -142,3 +142,25 @@ for (var i = 0; i < tracks.length; i++) {
 
 
 }
+
+function hide(){
+
+	var el = document.getElementById('hidetest');
+
+	if ( el.style.display != 'none' ) {
+
+		el.style.display = 'none';
+
+	}
+
+	else {
+
+		el.style.display = 'block';
+
+	}
+
+}
+
+// document.getElementById('divbtn').addEventListener('click',function(e){
+//     document.getElementById('hidetest').style.display = 'block';
+// });
