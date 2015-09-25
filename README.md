@@ -52,4 +52,6 @@ Once the search button is clicked the clickfunc function is called which creats 
 
 The displayData function is then called, this function has 'response' as a parameter. Here the 33 data properties within response are sorted into an array (arrphotos) acording to the value of the 'likes' property. 6 'img' elements are created, the src attribute is set as the img url from the first 6 objects in the photo array. 
 
-Contributors: Sohil, Tormod, Conor, Gethin.
+#####Contributors: 
+
+Sohil, Tormod, Conor, Gethin.
