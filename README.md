@@ -48,8 +48,8 @@ Two Qunit tests used to examine our use of the Souncloud API: the first, tested 
 
 ###Instagram API
 
-once the search button is clicked a function is run which changes the src attribute of the 'script' element. The script element will then contain the input from the user, The script element is then appended to the boody of the index.html file. 33 Pictures related to the users search are then returned in the form of an object called response. All of the current img elements displayed on the page are then removed.
+Once the search button is clicked the clickfunc function is called which creats a 'script' element and changes the src attribute. The script element will then contain the input from the user, The script element is then appended to the boody of the index.html file. 33 Pictures related to the users search are then returned in the form of an object called response. All of the current img elements displayed on the page are then removed.
 
-The displayData function is then called, this function has 'response' as a parameter. Here the 33 data properties within response are sorted into an array (arrphotos) acording to the value of the 'likes' property. 6 'img' elements are created, the src attribute is set as the img url from objects in the photo array. 
+The displayData function is then called, this function has 'response' as a parameter. Here the 33 data properties within response are sorted into an array (arrphotos) acording to the value of the 'likes' property. 6 'img' elements are created, the src attribute is set as the img url from the first 6 objects in the photo array. 
 
 Contributors: Sohil, Tormod, Conor, Gethin.
