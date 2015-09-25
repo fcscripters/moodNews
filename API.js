@@ -1,3 +1,7 @@
+//
+// Instagram API
+//
+
 function displayData(response) {
   var arrphotos = [];
   var arrphotoswhole = [];
@@ -64,7 +68,13 @@ document.getElementById("search").addEventListener("click", clickfunc);
 
 
 
-///////////////////////////////////////////////////////////////////
+
+//
+// Soundcloud API
+//
+
+
+
 
 document.getElementById("search").addEventListener("click", soundfunc);
 
