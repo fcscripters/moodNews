@@ -89,6 +89,10 @@ body{
   color: white;
   background-color: black;
   padding: 0em;
+
+}
+#track a:hover{
+  color: rgb(152, 152, 152);
 }
 
 #trackUser {
