@@ -1,173 +1,209 @@
-body{
-  font-family: Raleway;
-
-}
-.title{
-  background-color: rgb(85, 85, 85);
-  font-size: 4em;
-  height: 4em;
-  text-align: center;
-}
-.title h2{
-  margin-top: 0em;
-  padding-top: 0.75em;
-}
-.form{
-  background-color: rgb(152, 152, 152);
-  height: 25em;
-  text-align: center;
-
+body {
+    font-family: Raleway;
 }
 
-.form p{
-  margin:0px;
-  padding-top: 0.75em;
-  font-size: 2.5em;
-  text-align: center;
-}
-#result{
-  width:10em;
-  height:2em;
-  text-align: center;
-  font-size: 2.5em;
-  border-radius: 0.5em;
-  margin-top: 0.75em;
-}
-#search{
-  margin-top: 1em;
-  background: #3498db;
-  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
-  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
-  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
-  background-image: -o-linear-gradient(top, #3498db, #2980b9);
-  background-image: linear-gradient(to bottom, #3498db, #2980b9);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 20px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 20px 35px 20px 35px;
-  text-decoration: none;
+.title {
+    background-color: rgb(85, 85, 85);
+    font-size: 4em;
+    height: 4em;
+    text-align: center;
 }
 
-#insta{
-  background-color: rgb(18, 86, 136);
-  text-align: center;
+.title h2 {
+    margin-top: 0em;
+    padding-top: 0.75em;
 }
-.instaphotos{
-  margin-top: 0px;
-  height:50em;
-  width:50em;
-  text-align: center;
-  margin: 0.25em 0.25em 0.25em 0.25em;
-  border-radius: 1em;
+
+.form {
+    background-color: rgb(152, 152, 152);
+    height: 25em;
+    text-align: center;
 }
-.divlogo{
-  background-color: rgb(18, 86, 136);
-  text-align: center;
-  padding:1.5em;
+
+.form p {
+    margin: 0px;
+    padding-top: 0.75em;
+    font-size: 2.5em;
+    text-align: center;
 }
-.logo{
-  text-align: center;
-  height:5em;
-  width:5em;
-  text-align: center;
+
+#result {
+    width: 10em;
+    height: 2em;
+    text-align: center;
+    font-size: 2.5em;
+    border-radius: 0.5em;
+    margin-top: 0.75em;
 }
-.soundcloud{
-  background-color: #ff3300;
-  text-align: center;
-  padding:1.5em;
+
+#search {
+    margin-top: 1em;
+    background: #3498db;
+    background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+    background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+    background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+    background-image: -o-linear-gradient(top, #3498db, #2980b9);
+    background-image: linear-gradient(to bottom, #3498db, #2980b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 20px 35px 20px 35px;
+    text-decoration: none;
 }
-#track{
-  list-style: none;
-  font-size: 4.5em;
+
+#insta {
+    background-color: rgb(18, 86, 136);
+    text-align: center;
+}
+
+.instaphotos {
+    margin-top: 0px;
+    height: 50em;
+    width: 50em;
+    text-align: center;
+    margin: 0.25em 0.25em 0.25em 0.25em;
+    border-radius: 1em;
+}
+
+.divlogo {
+    background-color: rgb(18, 86, 136);
+    text-align: center;
+    padding: 1.5em;
+}
+
+.logo {
+    text-align: center;
+    height: 5em;
+    width: 5em;
+    text-align: center;
+}
+
+.soundcloud {
+    background-color: #ff3300;
+    text-align: center;
+    padding: 1.5em;
+}
+
+#track {
+    list-style: none;
+    font-size: 4.5em;
 }
 
 #track a {
-  text-decoration: none;
-  color: white;
-  background-color: black;
-  padding: 0em;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    padding: 0em;
 }
 
 #trackUser {
-  list-style: none;
-  font-size: 1.5em;
-  padding: 0em;
+    list-style: none;
+    font-size: 1.5em;
+    padding: 0em;
 }
 
+.soundcloudlogo {
+    background-color: #ff3300;
+    text-align: center;
+    padding: 1.5em;
+}
 
-.soundcloudlogo{
-  background-color: #ff3300;
-  text-align: center;
-  padding:1.5em;
+.soundlogo {
+    text-align: center;
+    height: 5em;
+    /*width:6em;*/
+    text-align: center;
 }
-.soundlogo{
-  text-align: center;
-  height:5em;
-  /*width:6em;*/
-  text-align: center;
-}
-#play{
-  margin-top: 1em;
-  background: #00ccff;
 
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 20px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 20px 35px 20px 35px;
-  text-decoration: none;
+#play {
+    margin-top: 1em;
+    background: #00ccff;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 20px 35px 20px 35px;
+    text-decoration: none;
 }
-#stop{
-  margin-top: 1em;
-  background: #00ccff;
 
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 20px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 20px 35px 20px 35px;
-  text-decoration: none;
+#stop {
+    margin-top: 1em;
+    background: #00ccff;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 20px 35px 20px 35px;
+    text-decoration: none;
 }
-#pause{
-  margin-top: 1em;
-  background: #00ccff;
 
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 20px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 20px 35px 20px 35px;
-  text-decoration: none;
+#pause {
+    margin-top: 1em;
+    background: #00ccff;
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 20px 35px 20px 35px;
+    text-decoration: none;
 }
-#playbutton, #stopbutton, #pausebutton{
-  height:2em;
-  width:2em;
+
+#title {
+    list-style: none;
+    text-align: center;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    width: 60%;
+    margin: 0 auto;
 }
-#hidetest{
-  display:none;
+
+.tracks {
+    font-size: 1.5em;
+    color: white;
+    cursor: pointer
 }
-.divbtn{
-  background-color: rgb(0, 0, 0);
-  text-align: center;
+
+.selected { 
+    color: blue;
+    font-size: 2em;
+
 }
-#hidebtn{
-  margin: 0.25em 0em 0.25em 0em;
-  background: rgb(152, 152, 152);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 20px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 30px;
-  padding: 10px 15px 10px 15px;
-  text-decoration: none;
+
+#playbutton,
+#stopbutton,
+#pausebutton {
+    height: 2em;
+    width: 2em;
+}
+
+#hidetest {
+    display: none;
+}
+
+.divbtn {
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+#hidebtn {
+    margin: 0.25em 0em 0.25em 0em;
+    background: rgb(152, 152, 152);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 20px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 30px;
+    padding: 10px 15px 10px 15px;
+    text-decoration: none;
 }
