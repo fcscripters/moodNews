@@ -55,7 +55,7 @@ function clickfunc(){
   // insert script to document and load content
   document.body.appendChild(script);
 
-  //this removes img elements???
+  //this removes img elements
   var element = document.getElementsByClassName("instaphotos");
   for (index = element.length - 1; index >= 0; index--) {
     element[index].parentNode.removeChild(element[index]);
@@ -104,36 +104,22 @@ tracks.sort(function(a,b){
   return a.created_at < b.created_at;
 });
 
-for (var i = 0; i < tracks.length; i++) {
-  console.log(tracks[i].created_at);
-}
-
-    console.log(tracks);
-
+//Adding track name and user URL to soundcloud div
     trackID = tracks[0].id;
     //console.log (trackID);
-
+//these have been created using soundclouds API user guide lines
     document.getElementById("track").innerHTML = "<a href=" +tracks[0].permalink_url+ ">" +tracks[0].title+"</a>";
 
     document.getElementById("trackUser").innerHTML = tracks[0].user.username;
 
   SC.stream("/tracks/"+ trackID, function(sound) {
       document.getElementById('play').addEventListener("click", function(){
-          console.log(trackID);
-          //document.getElementById('play').click() = function(e) {
-          //e.preventDefault();
           sound.play();
       });
       document.getElementById('stop').addEventListener("click", function(){
-          console.log(trackID);
-          //document.getElementById('play').click() = function(e) {
-          //e.preventDefault();
           sound.stop();
       });
       document.getElementById('pause').addEventListener("click", function(){
-          console.log(trackID);
-          //document.getElementById('play').click() = function(e) {
-          //e.preventDefault();
           sound.pause();
       });
     });
@@ -142,21 +128,15 @@ for (var i = 0; i < tracks.length; i++) {
 
 
 }
-
+//this function hides/ shows the avaliable tests
 function hide(){
 
 	var el = document.getElementById('hidetest');
-
 	if ( el.style.display != 'none' ) {
-
 		el.style.display = 'none';
-
 	}
-
 	else {
-
 		el.style.display = 'block';
-
 	}
 
 }
